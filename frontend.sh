@@ -7,7 +7,7 @@ set -e
 ID=$(id -u)
 if [ "$ID" -ne 0 ]; 
 then
-    echo -e "\e[31m pls login as a root user \e[0m"
+    echo -e "\e[33m pls login as a root user \e[0m"
     exit 1
 fi
 
