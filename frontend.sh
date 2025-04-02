@@ -5,8 +5,9 @@ echo "I am frontend"
 set -e
 
 ID=$(id -u)
-if [ "$ID" -ne 0 ]; then
-    echo -e "\e[32m pls login as a root user \e[0m"
+if [ "$ID" -ne 0 ]; 
+then
+    echo -e "\e[31m pls login as a root user \e[0m"
     exit 1
 fi
 
