@@ -5,7 +5,7 @@ echo "I am frontend"
 # this command will stop script if any error
 set -e
 
-ID= $(id -u)
+ID=$(id -u)
 
 if ["ID" -ne 0]; then
     echo "\e[32m pls login as a root user \e[0m"
