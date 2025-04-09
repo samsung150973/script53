@@ -19,12 +19,26 @@ yum install nginx -y &>> /temp/nginixinstall.log
 # check if nginix installition is successful and print a message
 if [ $? -ne 0 ];
 then
+    echo -e "\e[33m Nginix installation unsuccessful \e[0m"
+    exit 2
+else 
     echo -e "\e[33m Nginix installation successful \e[0m"
 fi
 
 
 #download the frontend file from the loation
 curl -s -L -o /tmp/frontend.zip "https://github.com/stans-robot-project/frontend/archive/main.zip"
+
+# check if frontend download successful and print a message
+if [ $? -ne 0 ];
+then
+    echo -e "\e[33m fronend download unsuccessful \e[0m"
+    exit 3
+else 
+    echo -e "\e[33m Nginix installation successful \e[0m"
+fi
+
+
 
 #Clear the folder & Deploy the new frontend file in the html folder
 cd /usr/share/nginx/html
@@ -38,3 +52,4 @@ mv localhost.conf /etc/nginx/default.d/roboshop.conf
 #restart nginx
 systemctl enable nginx
 systemctl start nginx
+echo -e "\e[33m Nginix restart successful \e[0m"
