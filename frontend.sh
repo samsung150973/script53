@@ -14,7 +14,7 @@ fi
 
 # install nginix
 echo " installing nginx"
-yum install nginx -y &>> /temp/nginixinstall.log
+yum install nginx -y &>> nginixinstall.log
 
 # check if nginix installition is successful and print a message
 if [ $? -ne 0 ];
