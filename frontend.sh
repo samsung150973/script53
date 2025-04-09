@@ -24,7 +24,7 @@ fi
 
 # install nginix
 echo -n "installing nginx :"
-yum install nginx -y &>> $logfile
+yum install nginx -y &>> "$logfile"
 
 # check if nginix installition is successful and print a message
 check ()
@@ -53,14 +53,14 @@ check()
 
 #Clear the folder & Deploy the new frontend file in the html folder
 cd /usr/share/nginx/html
-rm -rf * &>> $logfile
-unzip /tmp/frontend.zip &>> $logfile
+rm -rf * &>> "$logfile"
+unzip /tmp/frontend.zip &>> "$logfile"
 mv frontend-main/* .
 mv static/* .
 rm -rf frontend-main README.md
 mv localhost.conf /etc/nginx/default.d/roboshop.conf
 
 #restart nginx
-systemctl enable nginx &>> $logfile
-systemctl start nginx &>> $logfile
+systemctl enable nginx &>> "$logfile"
+systemctl start nginx &>> "$logfile"
 echo -e "\e[33m Nginix restart successful \e[0m"
