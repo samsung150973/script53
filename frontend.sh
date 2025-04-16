@@ -3,7 +3,7 @@ echo "I am frontend"
 COMPONENT=frontend
 LOGFILE="install.log"
 
-Check (){
+check (){
 if [ $1 -ne 0 ]; 
     then
         echo -e "\e[33m unsuccessful \e[0m"
