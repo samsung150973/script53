@@ -13,7 +13,7 @@ if [ $1 -ne 0 ];
 fi
 }
 
-# this command will stop script if any error
+# this will stop script if any error
 set -e
 
 # check if root user. in lunix root user id is 0 "id -u". Assign output to a variable and then check
