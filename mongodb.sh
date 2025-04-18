@@ -7,7 +7,7 @@ COMPONENT=mongo
 set -e
 
 # logfile for standart and error output
-LOFGILE = "mongoinstall.log"
+LOFGILE="mongoinstall.log"
 
 
 # check if root user
