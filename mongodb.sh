@@ -12,7 +12,7 @@ LOFGILE="mongoinstall.log"
 
 # check if root user
 ID=$(id -u)
-if ["$ID" -eq 0];
+if [ "$ID" -ne 0 ];
     then
         echo -e "\e [33m login as root user \e [0m"
         exit 1      
@@ -21,7 +21,7 @@ fi
 
 #function to check status is successful
 check (
-    if [$1 -ne 0];
+    if [ $1 -ne 0 ];
         then
             echo -e "\e [32m installion Unsuccessful \e [0m"
         else 
