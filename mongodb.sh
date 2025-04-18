@@ -14,7 +14,7 @@ LOFGILE="mongoinstall.log"
 ID=$(id -u)
 if [ "$ID" -ne 0 ];
     then
-        echo -e "\e[33m login as root user \e [0m"
+        echo -e "\e[33m login as root user \e[0m"
         exit 1      
 fi
 
@@ -23,9 +23,10 @@ fi
 check (
     if [ $1 -ne 0 ];
         then
-            echo -e "\e [32m installion Unsuccessful \e [0m"
+            echo -e "\e[32m installion Unsuccessful \e[0m"
         else 
-            echo -e "\e [32m Install Successful \e [0m"
+            echo -e "\e[32m Install Successful \e[0m"
+    fi
 )
 
 
