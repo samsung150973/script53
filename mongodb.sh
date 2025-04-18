@@ -3,6 +3,9 @@
 echo "I am mongodb"
 COMPONENT=mongo
 
+#error handling
+set -e
+
 # logfile for standart and error output
 LOFGILE = "mongoinstall.log"
 
@@ -18,7 +21,7 @@ fi
 
 #function to check status is successful
 check (
-    if [$1 -eq 0];
+    if [$1 -ne 0];
         then
             echo -e "\e [32m installion Unsuccessful \e [0m"
         else 
@@ -31,7 +34,7 @@ curl -s -o /etc/yum.repos.d/mongodb.repo https://github.com/samsung150973/script
 
 # install mongodB and start the service
 echo -n "installing mongodb"
-yum install -y mongodb-org
+yum install -y mongodb-org &>> $LOGFILE
 systemctl enable mongod
 systemctl start mongod
 check $?
