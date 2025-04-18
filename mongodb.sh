@@ -20,14 +20,13 @@ fi
 
 
 #function to check status is successful
-check (
+check () {
     if [ $1 -ne 0 ];
         then
             echo -e "\e[32m installion Unsuccessful \e[0m"
         else 
             echo -e "\e[32m Install Successful \e[0m"
-    fi
-)
+}
 
 
 # Create a /etc/yum.repos.d/mongodb-org-8.0.repo file so that you can install MongoDB directly using yum:
