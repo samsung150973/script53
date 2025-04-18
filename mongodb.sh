@@ -35,7 +35,7 @@ curl -s -o /etc/yum.repos.d/mongodb.repo https://github.com/samsung150973/script
 
 # install mongodB and start the service
 echo -n "installing mongodb"
-yum install -y mongodb-org &>> $LOGFILE
+yum install -y mongodb-org
 systemctl enable mongod
 systemctl start mongod
 check $?
