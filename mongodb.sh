@@ -26,6 +26,7 @@ check () {
             echo -e "\e[32m installion Unsuccessful \e[0m"
         else 
             echo -e "\e[32m Install Successful \e[0m"
+    fi
 }
 
 
