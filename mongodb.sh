@@ -11,7 +11,7 @@ LOFGILE="mongoinstall.log"
 
 
 # check if root user
-ID=$(d -u)
+ID=$(id -u)
 if ["$ID" -eq 0];
     then
         echo -e "\e [33m login as root user \e [0m"
