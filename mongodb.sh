@@ -30,8 +30,8 @@ check () {
 }
 
 
-# Create a /etc/yum.repos.d/mongodb-org-8.0.repo file so that you can install MongoDB directly using yum:
-curl -s -o /etc/yum.repos.d/mongodb.repo "https://github.com/samsung150973/script53/blob/main/Repository/mongo.repo"
+# # Create a /etc/yum.repos.d/mongodb-org-8.0.repo file so that you can install MongoDB directly using yum:
+# curl -s -o /etc/yum.repos.d/mongodb.repo "https://github.com/samsung150973/script53/blob/main/Repository/mongo.repo"
 
 # install mongodB and start the service
 echo -n "installing mongodb"
